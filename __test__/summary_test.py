@@ -13,7 +13,7 @@ from app.models.conversation_summary import ConversationSummary
 @patch("app.services.transcriber.get_audio_duration")
 @patch("app.services.transcriber.split_to_sentences")
 @patch("app.services.transcriber.estimate_durations")
-@patch("app.services.transcriber.label_speakers_using_openai")
+@patch("app.services.transcriber.label_speakers")
 @patch("os.remove")
 @patch("app.services.conversation_summary_service.ConversationSummaryService.generate_summary")
 async def test_summarize_audio(

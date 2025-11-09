@@ -99,6 +99,8 @@ Response:
 ```
 
 ## 📁 Project Structure
+
+```
 conversation-from-audio/
 ├── .env.example
 ├── .gitignore
@@ -131,7 +133,7 @@ conversation-from-audio/
 └── utils/
     ├── prompt_templates.py
     └── main.py
-
+``
 
 ## ✅ Next Improvements
 - 🎙️ Real speaker detection using Resemblyzer
