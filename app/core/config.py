@@ -27,6 +27,7 @@ class Settings(BaseSettings):
     resend_api_key: str = Field(..., env="RESEND_API_KEY")
     email_from: str = Field(..., env="EMAIL_FROM")
     admin_email: str = Field(..., env="ADMIN_EMAIL")
+    gemini_api_key: str = Field(..., env="GEMINI_API_KEY")
     model_config = SettingsConfigDict(
         env_file=".env",
         extra='forbid'

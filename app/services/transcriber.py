@@ -1,7 +1,7 @@
 import asyncio, os
 from resemblyzer import VoiceEncoder
 from app.models.conversation import Message, Conversation
-from app.helper.labels_conversation import label_speakers_using_openai
+from app.helper.labels_conversation import label_speakers
 from app.helper.duration_call import get_audio_duration, estimate_durations
 from app.helper.download_file import download_file
 from app.helper.split_transcriptions import split_to_sentences
@@ -39,7 +39,7 @@ async def process_audio_url(audio_url: str) -> Conversation:
     sentences = split_to_sentences(transcript)
     durations = estimate_durations(sentences, total_duration) 
 
-    labels = label_speakers_using_openai(sentences)
+    labels = label_speakers(sentences=sentences)
 
     if len(labels) != len(sentences):
         print("Warning: label count doesn't match sentence count. Falling back.")
