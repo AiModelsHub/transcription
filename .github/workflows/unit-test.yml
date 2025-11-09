@@ -10,7 +10,9 @@ jobs:
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       TEST_AUDIO_URL: ${{ secrets.TEST_AUDIO_URL }}
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-
+      RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+      EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+      ADMIN_EMAIL: ${{ secrets.ADMIN_EMAIL }}
     steps:
       - uses: actions/checkout@v3
 
