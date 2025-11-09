@@ -1,6 +1,10 @@
 FROM python:3.12-slim
 
-RUN apt-get update && apt-get install -y ffmpeg
+RUN apt-get update && apt-get install -y \
+    ffmpeg \
+    build-essential \
+    python3-dev \
+    && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
