@@ -11,7 +11,7 @@ from app.core.config import settings
 @patch("app.services.transcriber.get_audio_duration")
 @patch("app.services.transcriber.split_to_sentences")
 @patch("app.services.transcriber.estimate_durations")
-@patch("app.services.transcriber.label_speakers_using_openai")
+@patch("app.services.transcriber.label_speakers")
 @patch("os.remove")
 async def test_process_audio_url(
     mock_remove: AsyncMock,
